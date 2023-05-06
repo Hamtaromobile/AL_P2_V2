@@ -1,0 +1,1408 @@
+*{
+    box-sizing: border-box;
+    /* box-sizing est appliqué à tous les éléments */
+ }
+    
+    #bloc_page /*Englobe header, main et footer*/
+    {
+        margin: 20px; 
+        font-family: Raleway, sans-serif; 
+    }
+
+    /*HEADER : Logo "Booki" + éléments de navigation : */
+    header /*Affichage des éléments de l'en-tête avec flex-box*/
+    {     
+        display: flex;
+        justify-content: space-between;    
+    }
+
+    header img /*Logo "Booki" de l'en-tête*/
+    {
+        margin-left: 10px; 
+    }
+
+    header ul /*Affichage de la liste de l'en-tête avec flex-box*/
+    {
+        margin-right: 60px; 
+        display: flex; 
+        list-style-type: none; 
+    }
+
+    header li/* Eléments de la liste de l'en-tête*/
+    {
+       padding: 35px; 
+    } 
+
+    header a /*Eléments de navigations de l'en-tête*/
+    {
+        text-decoration: none; 
+        color: #000000; 
+    }
+
+    header a:hover /*Texte en bleu et trait au-dessus au survole des éléments de navigations de l'en-tête*/
+    {
+        color:#0065FC; 
+        border-top: 1px solid #0065FC; 
+        padding-top: 35px; 
+    }
+
+    /*FORMULAIRE DE RECHERCHE : */
+    input[type="search"] /*Formulaire de recherche*/
+    {
+        width: 200px; 
+        height: 40px; 
+        margin-left: 50px; 
+        border: 1px solid #F2F2F2; 
+        position: relative; 
+    }
+
+    #rechercher /* Input "Rechercher" du formulaire*/
+    {
+        color: white; 
+        font-weight: bold; 
+        border: 1px solid #0065FC; 
+        border-radius: 0px 10px 10px 0px; 
+        background-color: #0065FC; 
+        padding: 10px; 
+        position: absolute; 
+        cursor: pointer; 
+        margin-left: -4px; 
+    }
+
+    #rechercher:hover /*Créer une ombre au survole de l'input "Rechercher"*/
+    {
+        box-shadow: 0px 5px 20px #999;
+    }
+
+    #ensemble_i_t_info{
+    display: flex;
+    }
+
+    .p_info{
+        margin-top: 0.6em;
+        margin-left: 0.6em;
+    }
+
+    #icone_srch /* "Icone localisation" du formulaire*/
+    {
+        border: 1px solid #F2F2F2; 
+        border-radius: 10px 0px 0px 10px; 
+        background-color: #F2F2F2; 
+        padding:10px; 
+        padding-left: 15px; 
+        padding-right: 15px;
+        position: absolute; 
+        cursor: text;
+        margin-left: 7px; 
+    }
+
+    #btn_lpe /*L'input avec une loupe n'est pas affiché pour l'ordinateur*/
+    {
+        display: none;
+    }
+
+    /* FILTRE DE RECHERCHE : */
+    .label /*Texte des filtres*/
+    {
+        font-weight: bold;
+        border:2px solid #DEEBFF;
+        border-radius: 20px 20px 20px 20px;
+        padding:9px;
+        padding-bottom: 6px;
+        padding-left: 45px;
+        cursor: pointer;
+        position:relative;       
+    }
+
+    #filtres ul /*Affichage de la liste des filtres avec flex-box*/
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 900px;
+        margin-top: 40px;
+        list-style-type: none; 
+    }
+
+    #filtre_eco /*"Input" du filtre "économique" positionné en fonction  du "label" de celui-ci*/
+    {
+        color:#0065FC;
+        border:1px solid #DEEBFF;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #DEEBFF;
+        padding:10px;
+        cursor: pointer;
+        margin-top: -11px;
+        position: absolute;
+    }
+
+    #filtre_eco:hover /*Change la couleur de fond au survol du filtre "économique"*/
+    {
+        background-color: #bbbbbb;
+    }
+
+    #filtre_fa /*"Input" du filtre "famille" positionné en fonction de "label" de celui-ci*/
+    {
+        color:#0065FC;
+        border:1px solid #DEEBFF;
+        border-radius: 22px 22px 22px 22px;
+        background-color: #DEEBFF;
+        padding:10px;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-top: -11px;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    #filtre_fa:hover /*Change la couleur de fond au survole du filtre "famille"*/
+    {
+        background-color: #bbbbbb;
+    }
+
+    #filtre_ro /*"Input" du filtre "romantique" positionné en fonction de "label" de celui-ci*/
+    {
+        color:#0065FC;
+        border:1px solid #DEEBFF;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #DEEBFF;
+        padding:10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-top: -11px;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    #filtre_ro:hover /*Change le couleur de fond au survole du filtre "romantique"*/
+    {
+        background-color: #bbbbbb;
+    }
+
+    #filtre_anim /*"Input" du filtre "animaux autorisés" positionné en fonction du "label" de celui-ci*/
+    {
+        color:#0065FC;
+        border:1px solid #DEEBFF;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #DEEBFF;
+        padding:10px;
+        margin-top: -11px;
+        cursor: pointer;
+        position: absolute;
+    }
+
+    #filtre_anim:hover /*Change la couleur du fond au survol du filtre "animaux autorisés"*/
+    {
+        background-color: #bbbbbb;
+    }
+
+    #info /*Ligne "d'information" situé en-dessous des filtres*/
+    {
+        color:#0065FC;
+        border:1px solid #DEEBFF;
+        padding:10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 20px 20px 20px 20px;
+        margin-top: 15px;       
+    }
+
+    /*SECTION "HEBERGEMENTS A MERSEILLE" ET "LES PLUS POPULAIRES" : "*/
+    #ensemble_sec_heb_pop /*Affichage des cards "Hébergements à Marseilles" et "les plus populaires" avec flex-box*/
+    {
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap-reverse;
+    }
+
+     /*COULEURS DES ETOILES BLEUES ET GRISES COMMUNES AU CARDS "HEBERGEMENTS A MARSEILLE" ET " LES PLUS POPULAIRES" :*/
+     .etoile_ble /*Note "étoile bleu*/
+     {
+         color: #0065FC;
+     }
+ 
+     .etoile_g /*Note "étoile grise"*/
+     {
+         color: #F2F2F2;
+     }
+
+    /*SECTION "HEBERGEMENTS A MARSEILLE : "*/
+    #sec_card_heb /*Affichage d'un fond coloré pour l'ensemble de la section correspondant à "Hébergements à Marseille"*/
+    {
+        background-color: #F2F2F2;
+        border-radius: 30px 30px 30px 30px;
+        width: 1240px;
+        height: 825px;
+    }
+
+    #titre_heb /*Titre "Hébergement à Marseille" */
+    {
+        margin-left: 40px;
+    }
+
+    .ensemble_card_heb /*Affichage des cards d'"Hébergements à Marseille" avec flex-box */
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+
+    .card_img_heb_tab /* Images des cards d'"Hébergements à Marseille" pour tablette, non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_heb_tel /* Image des cards d'"Hébergements à Marseille" pour télephone, non affiché*/
+    {
+        display: none;
+    }
+
+    .card_heb /*Compartiment d'une card pour "Hébergements à Marseille"*/
+    {
+        width:360px;
+        height: 290px;
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+        margin:20px;
+        margin-top: 15px;
+    }
+
+    .card_heb img  /*Image des cards d'"Hébergement à Marseille" */
+    {
+        position: absolute;
+        width : 343px;
+        height : 185px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /*top, left; transform : centrage de l'image en fonction de sa taille*/
+        border-radius: 25px 25px 0px 0px;
+        margin-top: -45px;
+    }
+
+    .card_heb a:hover .card_img_heb_ordi img /*Agrandissement progressif au survol de l'image pour les cards "Hébergement à Marseille"*/
+    { 
+        transition-duration: .8s; /*vitesse de transition*/
+        transition-timing-function: ease; /*vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin. */
+        width: 150%;
+        height: 133%;
+    }
+
+    .card_titre_heb /*Titre des cards pour "Hébergements à Marseille"*/
+    {
+        color: black;
+        position: absolute;
+        margin-top: 180px;
+        margin-left: 30px;
+    }
+
+    .card_heb a:hover .card_titre_heb /*Faire disparaitre le titre progressivement au survol des éléments de nav., pour les cards "Hébergements à Marseille" au survol*/
+    {
+        opacity: 0;
+        transition-duration: .9s;
+        transition-timing-function: ease;
+    }
+
+    .card_info_heb /*Ligne d'info des cards pour "Hébergements à Marseille"*/
+    {
+        color : black;
+        position: absolute;
+        margin-top: 218px;
+        margin-left: 30px;
+    }
+    .card_heb a:hover .card_info_heb /*Faire disparaitre la ligne d'info progressivement au survol des éléments de nav., pour les cards "Hébergements à Marseille"*/
+    {
+        opacity: 0;
+        transition-duration: .9s;
+        transition-timing-function: ease;
+    }
+
+    .card_note_heb /*Note "étoile" des cards pour "Hébergements à Marseille"*/
+    {
+        position: absolute;
+        margin-top: 260px;
+        margin-left: 30px;
+        display: flex;
+    }
+
+    .card_heb a:hover .card_note_heb /*Faire disparaitre la note progressivement au survol des élément de nav., pour les cards "Hébergements à Marseille"*/
+    {
+        opacity: 0;
+        transition-duration: .9s;
+        transition-timing-function: ease;
+    }
+
+    #aff_plus /* Texte "afficher plus" dans "Hébergements à Marseille"*/
+    {
+        color:black;
+        text-decoration: none;
+        font-weight: bold;
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+
+    #aff_plus:hover /* Soulignement du texte "afficher plus" au survol*/
+    {
+        text-decoration: underline;
+    }
+
+    /*SECTION "LES PLUS POPULAIRE" :*/
+    #titre_pop /* Titre "Les plus populaire" */
+    {
+        margin-left: 40px;
+    }
+
+    #ico_pop/* Icone du titre "Les plus populaires"*/
+    {
+        font-size: 200%;
+        margin-top: 10px;
+    }
+
+    #ensemble_h1_ico_pop /*Affichage du titre et de l'icone pour "Les plus populaires" avec flex-box*/
+    {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 40px;
+    }
+
+    #sec_card_pop /*Affichage d'un fond coloré pour l'ensemble de la section correspondant à "Les plus populaires"*/
+    {
+        background-color: #F2F2F2;
+        border-radius: 30px 30px 30px 30px;
+        width: 600px;
+        height: 825px;
+    }
+    
+    .card_pop /*Compartiment d'une card pour "Les plus populaires"*/
+    {
+        width:520px;
+        height: 210px;
+        position: relative;
+        overflow: hidden;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+        margin:40px;
+        margin-top: 12px;
+    }
+
+    .card_pop img  /*Image des cards pour "Les plus populaires"*/
+    {
+        position: absolute;
+        width : 203px;
+        height : 190px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /*top, left; transform : centrage de l'image en fonction de sa taille*/
+        border-radius: 25px 0px 0px 25px;
+        margin-left: -150px;
+    }
+    
+    .card_img_pop_tab /* Images des cards "les plus populaire" pour tablette, non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_pop_tel /* Image  des cards "les plus populaire" pour télephone, non affiché*/
+    {
+        display: none;
+    }
+
+    .card_pop a:hover .card_img_pop_ordi img /*Agrandir progressivement l'image au survol des éléments de nav., des cards pour "Les plus populaires"*/
+    { 
+        transition-duration: .5s; /*vitesse de transition*/
+        transition-timing-function: ease; /*vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin. */
+        width: 48%;
+        height: 105%;
+        border-radius: 25px 25px 25px 25px;
+    }
+
+    .card_pop:hover /*L'image peut dépasser du conteneur des cards au survol pour "Les plus populaires" */
+    {
+        overflow: visible;
+    }
+
+    .card_titre_pop  /*Réduit la largeur du conteneur du "titre" pour l'écrire sur 2 lignes ; card "Les plus populaires"*/
+    {
+        width: 250px;
+    }
+
+    .card_titre_pop /*Titre des cards pour les "plus populaire"*/
+    {
+        color: black;
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 250px;
+    }
+
+    .card_pop a:hover .card_titre_pop /*Décale le titre vers la droite au survol des éléments de nav., pour les cards "Les plus populaires"*/
+    {
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        padding-left :20px;
+    }
+
+    .card_info_pop /*Info des cards pour "les plus populaire"*/
+    {
+        color : black;
+        position: absolute;
+        margin-top: 80px;
+        margin-left: 250px;
+    }
+
+    .card_pop a:hover .card_info_pop /*Décale la ligne d'info vers la droite au survol des éléments de nav., pour les cards "Les plus populaires" au survol*/
+    {
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        padding-left :20px;
+    }
+    
+    .card_note_pop /*Note "étoile" de la card pour "Les plus populaires"*/
+    {
+        position: absolute;
+        margin-top: 175px;
+        margin-left: 250px;
+        display: flex;
+    }
+
+    .card_pop a:hover .card_note_pop /*Décale la note vers la droite au survol des éléments de nav., pour les cards "Les plus populaires" au survol*/
+    {
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        padding-left :20px;
+    }
+
+    /*SECTION "ACTIVITES A MARSEILLE" : */
+    #Ensemble_card_act /*Englobe cards "Activités à Marseille*/
+    {
+        display:flex;
+        justify-content: space-between;
+    }
+
+    #Ensemble_card_act_h1 /*Ensemble de la section "Activités à Marseille*/
+    {
+        margin-top:70px;
+    }
+
+    #Ensemble_card_act a /*Lien de navigation dans "Activités à Marseille*/
+    {
+        text-decoration: none;
+        color:black;
+    }
+
+    #ensemble_card_FP_IF /*Affichage des  cards "Fort de Pomègue" et "Iles du Frioul" avec flex-box ; "Activités à Marseille"*/
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    #ensemble_card_NDG_PL /*Affichage des cards "Notre-Dame-de-la-Grade" et "Parc Longchamp" avec flex-box ; "Activités à Marseille"*/
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .card_titre_act /* Titre des cards "Activités à Marseille"*/
+    {
+        margin-left: 30px;
+    }
+
+    .card_VP_PNC /*Conteneur des cards "Vieux Port" et "Parc Nationnal des Calanques" ; "Activités à Marseille" */
+    {
+        width: 430px;
+        height: 600px;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .card_img_act_ordi_VP_PNC /*Conteneur de l'image pour les card "Vieux Port" et "Parc Nationnal des Calanques" ; "Activités à Marseille"*/
+    {
+        position: relative;
+        overflow: hidden;
+        height:535px;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .card_VP_PNC img /*Images des cards "Vieux Port" et "Parc Nationnal des Calanques" ;"Activités à Marseille"*/
+    {
+        width:200%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card_VP_PNC:hover/*Ajoute un filtre opaque au survol des cards "Vieux Port" et "Parc Nationnal des Calanques" ;"Activités à Marseille"*/
+    {
+        filter: opacity(0.7);
+    }
+
+    .card_FP /*Conteneur de la card "Fort de Pomègue ; "Activités à Marseille"*/
+    {
+        width: 430px;
+        height:340px;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .card_img_act_ordi_FP /*Conteneur de l'image pour la card "Fort de Pomègue" ; "Activités à Marseille"*/
+    {
+        height:270px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .card_FP img /* Image de la card "Fort de Pomègue" ; "Activités à Marseille"*/
+    {
+        width:100%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* "top , "left" , "transform" : rend visible la partie importante de l'image*/
+    }
+
+    .card_FP:hover/*ajoute un filtre opaque au survol de la card ""Fort de Pomègue" ;"Activités à Marseille"*/
+    {
+        filter: opacity(0.7);
+    }
+
+    .card_IF /*Conteneur de la card "Iles du Frioul" ; "Activités à Marseille"*/
+    {
+        width: 430px;
+        height:215px;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .card_img_act_ordi_IF /*Conteneure de l'image pour la card "Iles du Frioul" ; "Activités à Marseille"*/
+    {
+        height:150px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .card_IF img /*Image de la card "Iles du Frioul" ; "Activités à Marseille"*/
+    {
+        width:100%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card_IF:hover/*Ajoute un filtre opaque au survol de la card "Iles du Frioul" ;"Activités à Marseille"*/
+    {
+        filter: opacity(0.7);
+    }
+
+    
+    .card_NDG_PL /*Conteneur des cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+    {
+        width: 430px;
+        height: 277px;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+    }
+
+    .card_img_act_ordi_NDG_PL /*Conteneure de l'image pour les cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+    {
+        height:210px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .card_NDG_PL img /*Image des cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+    {
+        width:100%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .card_NDG_PL:hover/*Ajoute un filtre au survol de la card "Notre-Dame-de-la-Garde" et "Parc Longchamp" ;"Activités à Marseille"*/
+    {
+        filter: opacity(0.7);
+    }
+
+    .card_img_act_tab /* Image des cards "Activités à Marseille" pour tablette non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_act_tel_VP /*Image des cards "Activités à Marseille" pour télephone non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_act_tel_IF /*Image des cards "Activités à Marseille" pour télephone non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_act_tel_PNC /*Image des cards "Activités à Marseille" pour télephone non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_act_tel_NDG /*Image des cards "Activités à Marseille" pour télephone non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_act_tel_FP /*Image des cards "Activités à Marseille" pour télephone non affiché*/
+    {
+        display: none;
+    }
+
+    .card_img_act_tel_PL /*Image des cards "Activités à Marseille" pour télephone non affiché*/
+    {
+        display: none;
+    }
+
+    /*PIED DE PAGE*/
+    footer /*Affichage des éléments du pied de page avec flex-box*/
+    {
+        display: flex;
+        background-color: #F2F2F2;
+        margin-top: 40px;
+    }
+
+    footer a /*Eléments de navigations du pieds de page*/
+    {
+        color:black;
+        text-decoration: none;
+    }
+
+    footer a:hover /*Change la couleur et souligne au survole les éléments de navigations du pied de page*/
+    {
+        color:#0065FC;
+        text-decoration: underline;
+    }
+
+    footer ul /*Liste du pied de page*/
+    {
+        margin-right:250px;
+        margin-left:30px;
+        list-style-type: none;
+    }
+
+    footer li /*Elément de la liste du pied de page*/
+    {
+        padding: 6px;
+    }
+
+    /*BREACK POINT : TABLETTE*/
+    @media all and (max-width: 992px) /*Media query pour les écrans en-dessous de 992px de large*/
+    {
+
+        /*HEADER; BREACK POINT TABLETTE : */
+        header /*Affichage des éléments de l'en-tête de la page en colonne*/
+        {
+            flex-direction: column; 
+        }
+
+        header img /* centre l'image "Booki" de l'en-tête de la page*/
+        {
+            width:220px;
+            height:100px; 
+            margin: auto;
+        }
+
+        header ul /* Centre la liste des éléments de navigations de l'en-tête de la page*/
+        {
+            justify-content: center; 
+        }
+
+        header li /* Centre les éléments de navigations de l'en-tête */
+        {
+            text-align: center;
+        }
+
+        #soulignement_heb /*Soulignement d'"Hébergement"*/
+        {
+            width: 202px;
+            padding-bottom: 35px;
+        }
+
+        #soulignement_act /*Soulignement d'"Activités"*/
+        {
+            width: 202px;
+            padding-bottom: 35px;
+        }
+
+        header a:hover /*Annule la bordure top au survol visible pour l'ordinateur*/
+        {
+            border-top:none;
+        }
+
+        header a:hover + #soulignement_heb /*Changement de couleur au survol du trait en-dessous pour "hébergement"*/
+        {
+            border-bottom: 1px solid #0065FC;
+        }
+
+        header a:hover + #soulignement_act /*Changement de couleur au survol du trait en dessous pour "activités" */
+        {
+            border-bottom: 1px solid #0065FC;
+        }
+
+        /*FORMULAIRE DE RECHERCHE ; BREACK POINT TABLETTE : */
+        #sec_form h1 /* Centrage du titre de la section correspondant au formulaire de recherche*/
+        {
+            width: 450px; 
+            margin: auto; 
+        }
+
+        #sec_form p /*Centrage du paragraphe de la section correspondant au formulaire de recherche*/
+        {
+            text-align: center;
+        }
+
+        #formulaire /*Centrage du formulaire de recherche d'"hébergement"*/
+        {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #rechercher  /*Input "rechercher" du formulaire n'est plus affiché pour tablette/téléphone*/
+        {
+            display: none;
+        }
+
+        .btn_lpe /*Input "loupe" du formulaire visible pour les tablette/télephone*/
+        {
+            color: white; 
+            border: 1px solid #0065FC; 
+            border-radius: 10px 10px 10px 10px; 
+            background-color: #0065FC; 
+            padding: 10px; 
+            padding-left: 12px;
+            padding-right: 12px;
+            position: absolute; 
+            cursor: pointer; 
+            margin-left:-6px; 
+        }
+
+        /*FILTRE DE RECHERCHE ; BREACK POINT TABLETTE : */
+
+        #filtres ul /*Centrage de la liste des éléments du filtre*/
+        {
+            height : 160px;
+            width: 340px;
+            margin: auto;
+        }
+
+        #info /* Ligne d'information en-dessous des filtres de recherche*/
+        {
+            margin-top: -20px;
+        }
+
+        /*SECTION "HEBERGEMENT A MARSEILLE" ; BREACK POINT TABLETTE : */
+        #sec_card_heb /*Affichage de l'ensemble de la section pour "Hébergement à Marseille" sans le fond pour tablette/téléphone*/
+        {
+            background: none;
+            margin-left: 150px;
+        }
+
+        .card_heb a:hover .card_titre_heb /*Annule l'oppactiée du titre pour card "Hébergement à Marseille" au survol pour "tablette/télephone"*/
+        {
+            opacity: 1;
+        }
+
+        .card_heb a:hover .card_info_heb /*Annule l'oppactiée de la ligne d'info. pour card "Hébergement à Marseille" au survol pour "tablette/télephone"*/
+        {
+            opacity: 1;
+        }
+
+        .card_heb a:hover .card_note_heb /*Annule l'oppactiée de la note pour card "Hébergement à Marseille" au survol pour "tablette/télephone"*/
+        {
+            opacity: 1;
+        }
+
+        .card_img_heb_ordi /*Images des cards "Hébergement à Marseille" visible que pour l'ordinateur */
+        {
+            display:none;
+        }
+
+        .card_img_heb_tab /*Images des cards : "Hébergement à Marseille" visible que pour tablette */
+        {
+            display: block;
+        }
+
+        /*SECTION "LES PLUS POPULAIRES" ; BREACK POINT TABLETTE : */
+        #sec_card_pop/*Centrage de l'ensemble de la section pour "Les plus populaire" pour tablette/téléphone*/
+        {
+            border-radius: 0px 0px 0px 0px;
+            margin:auto;
+            margin-top : 20px;
+        }
+        
+        .card_pop a:hover .card_titre_pop /*Annule le décalage du titre vers la droite pour card "Les plus populaires" au survol pour "tablette/télephone"*/
+        {
+        padding-left :0px;
+        }
+
+        .card_pop a:hover .card_info_pop /*Annule le décalage de la ligne d'info. vers la droite pour card "Les plus populaires" au survol pour "tablette"*/
+        {
+        padding-left :0px;
+        }
+
+        .card_pop a:hover .card_note_pop /*Annule le décalage de la note vers la droite pour card "Les plus populaires" au survol pour "tablette"*/
+        {
+        padding-left :0px;
+        }
+
+        .card_img_pop_ordi /*Image card "Les plus populaire" visible que pour l'ordinateur*/
+        {
+            display: none;
+        }
+
+        .card_img_pop_tab /* Image card "Les plus populaires" visible que pour tablette*/
+        {
+            display: block;
+        }
+
+        /*SECTION "ACTIVITES A MARSEILLE" ; BREACK POINT TABLETTE : */
+        #Ensemble_card_act /*Annule "display flex box" pour cards : "activités à Marseille"; affichage tablette/télephone*/
+        {
+            display: block;
+        }
+
+        #ensemble_card_FP_IF /*Annule "display flex box" pour cards : "Fort de Pomègue" et "Iles du Frioul"; affichage tablette/télephone*/
+        {
+            display: block;
+        }
+    
+        #ensemble_card_NDG_PL /* Annule "display flex box" pour cards : "Notre-Dame-de-la-Grade" et "Parc Longchamp"; affichage tablette/télephone*/
+        {
+            display: block;
+        }
+
+        .card_img_act_ordi_VP_PNC  /*Annule l'affichage image cards : "Vieux Port" et "Parc Nationnal des Calanques" lié à l'écran d'ordinateur*/
+        {
+            display: none;
+        }
+
+        .card_img_act_ordi_FP  /*Annule l'affichage image card : "Fort de Pomègue" lié à l'écran d'ordinateur*/
+        {
+            display: none;
+        }
+
+        .card_img_act_ordi_IF /*Annule l'affichage image card : "Iles du Frioul" lié à l'écran d'ordinateur*/
+        {
+            display: none;
+        }
+
+        .card_img_act_ordi_NDG_PL /*Annule l'affichage image cards : "Notre-Dame-de-la-Garde" et "Parc Longchamp" lié à l'écran d'ordinateur*/
+        {
+            display: none;
+        }
+ 
+        #Ensemble_card_act_h1 /*Ensemble de la section correspondant à "Activités à Marseille"*/
+        {
+            margin-top:1350px;
+            margin-left: 200px;
+        }
+
+        .card_img_act_tab /*Conteneur de l'image pour "Tablette" pour les cards : "Activités à Marseille"*/
+        {
+            display: block;
+            width: 390px;
+            height:250px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px 30px 0px 0px;
+            margin-top: 60px;
+        }
+
+        .card_img_act_tab img /* Image "Tablette" pour les cards : "Activités à Marseille"*/
+        {
+            width:100%;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card_VP_PNC /*Cards "Vieux Port" et "Parc Nationnal des Calanques" ; "Activités à Marseille" */
+        {
+            width: 390px;
+            height: 320px;
+            margin-top: 60px;
+        }
+
+        .card_FP /*Card "Fort de Pomègue" ; "Activités à Marseille"*/
+        {
+            width: 390px;
+            height:320px;
+            margin-top: 60px;
+        }
+
+        .card_IF /*Card "Iles du Frioul" ; "Activités à Marseille"*/
+        {
+            width: 390px;
+            height:320px;
+            margin-top: 60px;
+        }
+
+        .card_NDG_PL /*Cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+        {
+            width: 390px;
+            height: 320px;
+            margin-top: 60px;
+        }
+
+        /*PIED DE PAGE ; BREACK POINT TABLETTE */
+        footer /*Affichage en colonne des éléments du pied de page*/
+        {
+            flex-direction: column;
+        }
+
+        footer ul /* Alignement au centre de la liste du pied de page*/
+        {
+            text-align: center;
+            margin: auto;
+        }
+    }
+    
+    /*BREACK POINT TELEPHONE*/
+    @media only screen and (max-width: 768px) /*Media query pour les écrans en-dessous de 768px de large*/
+    {
+        p {
+            font-size: 0.9em;
+        }
+
+        h1{
+            font-size: 1.3em;
+        }
+
+        h2{
+            font-size: 1em;
+        }
+
+        #bloc_page{
+            margin: auto;
+        }
+
+        .retour
+        {
+        display: block;
+        }
+
+        .titre_hebergement{
+            padding-left: 20px;
+        }
+
+        .p_hebergement{
+            margin-left: -3.5em;
+        }
+
+        #recherche{
+            margin-left: -6em;
+        }
+
+        .filtre_titre{
+            margin-left: 1em;
+        }
+
+        #selection_filtre{
+            margin-left: -5em; 
+        }
+
+        #sec_form p{
+            text-align: left;
+            margin-left: 1em;
+        }
+
+        #ensemble_i_t_info{
+            margin-left: 1em;
+        }
+
+        .retour_i{
+            display:block;
+           
+        }
+
+        .p_info{
+            margin-top: -1.3em;
+            margin-left: -0.3em;
+        }
+
+        /*HEADER ; BREACK POINT TELEPHONE*/
+        header li /*Annulation de la marge interne d'"hébergement" et d'"activité"*/
+        {
+            padding:0px; 
+        }
+        
+        #nav_heb /*Repositionnement du lien de navigation "Hébergement"*/
+        {
+            margin-right:-40px;
+        }
+
+        #nav_act/*Repositionnement du lien de navigation "Activités"*/
+        {
+            margin-right: 40px;
+        }
+        
+        #soulignement_heb /*Affichage du trait en-dessous de "Hébergement"*/
+        {
+            border-bottom: 1px solid #F2F2F2;
+            width: 250px;
+        }
+
+        #soulignement_act /* Affichage du trait en-dessous de "Activités*/
+        {
+            border-bottom: 1px solid #F2F2F2;
+            width: 250px;
+        }
+
+        /*FORMULAIRE DE RECHERCHE ; BREACK POINT TELEPHONE : */
+        #sec_form /*Repositionnement du formulaire de recherche*/
+        {
+            margin-left:-10px;
+        }
+
+        #sec_form h1 /* Largeur reduite du Titre correspondant au "formulaire de recherche"*/
+        {
+            width: 410px;
+        }
+
+        /*SECTION "HEBERGEMENT A MARSEILLE" ; BREACK POINT TELEPHONE : */
+
+        #titre_heb /*Titre "Hébergement à Marseille" */
+        {
+        margin-left: 3em;
+        margin-top: 3em;
+         }
+
+        .card_img_heb_tab /*Annulation de l'affichage de l'image "tablette" pour "Hébergement à Marseille" */
+        {
+            display: none;
+        }
+
+        .card_img_heb_tel /*Affichage de l'image "téléphone" pour "Hébergement à Marseille"*/
+        {
+            display: block;
+        }
+
+        #sec_card_heb /*affichage au centre de la section correspondante aux card "Hébergement à Marseille" pour "Télephone"*/
+        {
+            margin:auto;
+            margin-left:-2.2em;
+        }
+
+        .card_heb /*Compartiment d'une card pour "Hébergements à Marseille"*/
+        {
+            width:360px;
+            height: 240px;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 5px 20px #999;
+            border-radius: 30px 30px 30px 30px;
+            margin:20px;
+            margin-top: 15px;
+        }
+    
+        .card_heb img  /*Image des cards d'"Hébergement à Marseille" */
+        {
+            position: absolute;
+            width : 343px;
+            height : 145px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /*top, left; transform : centrage de l'image en fonction de sa taille*/
+            border-radius: 25px 25px 0px 0px;
+            margin-top: -2.5em;
+        }
+
+        
+
+        .card_titre_heb /*Titre des cards pour "Hébergements à Marseille"*/
+        {
+            margin-top: 9.5em;
+        }
+
+        .card_info_heb{
+            margin-top: 10.9em;
+        }
+
+        .card_note_heb{
+            margin-top: 13.3em;
+        }
+
+        /*SECTION "LES PLUS POPULAIRES" ; BREACK POINT TELEPHONE : */
+        .card_img_pop_tab /*Annulation de l'affichage de l'image "tablette" pour "Les plus populaires" */
+        {
+            display:none;
+        }
+
+        .card_img_pop_tel /*Affichage de l'image "téléphone" pour "Les plus populaires"*/
+        {
+            display: block;
+        }
+
+        #ensemble_sec_heb_pop{
+            width: 25em;
+        }
+        
+        #sec_card_pop /*affichage au centre de la section correspondante aux card " Hebergement à Mareille" pour "Télephone"*/
+        {
+            margin:auto;
+            height: auto;
+           
+            margin-top: 2em;
+            margin-left: -0.5em;
+        }
+
+        /*SECTION "LES PLUS POPULAIRES" ; BREACK POINT TELEPHONE : */
+
+        #titre_pop{
+            margin-left: 0.5em;
+            margin-top: 1.5em;
+        }
+
+        .card_pop /*Compartiment d'une card pour "Les plus populaires"*/
+        {
+            width:350px;
+            height: 140px;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 5px 20px #999;
+            border-radius: 30px 30px 30px 30px;
+            margin:0px;
+            margin-top: 12px;
+            margin-left: 0.9em;
+        }
+    
+        .card_pop img  /*Image des cards pour "Les plus populaires"*/
+        {
+            position: absolute;
+            width : 140px;
+            height : 130px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /*top, left; transform : centrage de l'image en fonction de sa taille*/
+            border-radius: 25px 0px 0px 25px;
+            margin-left: -100px;
+        }
+
+        .retour_pop{
+            display: block;
+        }
+
+        .card_titre_pop /*Repositionnement du titre des cards "Les plus populaire" pour affichage "Télephone"*/
+        {
+            margin-left: 10em;
+            margin-top: 0em;
+            
+        }
+
+        .card_info_pop /* Repositionnement de la ligne d'info. (prix) des cards "Les plus populaires" pour affichage "Télephone"*/
+        {
+            margin-left:10em;
+            margin-top: 2.7em;
+        }
+
+        .card_note_pop/* Repositionnement des notes des cards "Les plus populaires" pour affichage "Télephone"*/
+        {
+            margin-left: 10em;
+            margin-top: 7em;
+        }
+
+        /*SECTION "ACTIVITES A MARSEILLE" ; BREACK POINT TELEPHONE : */
+        #Ensemble_card_act_h1 /* Centrage de l'ensemble de la section "Activités à Marseille"*/
+        {
+            margin:auto;
+            margin-top:65em;
+            margin-left: 1em;
+        }
+
+        .card_img_act_tab /* Annulation de l'affichage de l'image "Tablette" "Activités à Marseille"*/
+        {
+            display:none;
+        }
+
+        .card_titre_act{
+            margin-top: 1.3em;
+        }
+
+        .card_VP_PNC /*Conteneur des cards "Vieux Port" et "Parc Nationnal des Calanques" ; "Activités à Marseille" */
+        {
+            width: 340px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0px 5px 20px #999;
+            border-radius: 30px 30px 30px 30px;
+            margin-top: 2em;
+        }
+
+        .card_img_act_tel_VP/*Conteneur de l'image pour "Télephone" pour les cards : "Activités à Marseille"*/
+        {
+            position: relative;
+            overflow: hidden;
+            height:140px;
+            border-radius: 30px 30px 0px 0px;
+        }
+
+        .card_img_act_tel_VP img /* Image "Télephone" pour les cards : "Activités à Marseille"*/
+        {
+            width:100%;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 2em;
+        }
+
+        .card_img_act_tel_PNC
+        {
+            position: relative;
+            overflow: hidden;
+            height:140px;
+            border-radius: 30px 30px 0px 0px;
+        }
+
+        .card_img_act_tel_PNC img{
+            width:100%;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 2em;
+        }
+
+        .card_FP /*Conteneur de la card "Fort de Pomègue ; "Activités à Marseille"*/
+    {
+        width: 340px;
+        height: 200px;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+        margin-top: 2em;
+    }
+
+    .card_img_act_tel_FP /*Conteneur de l'image pour la card "Fort de Pomègue" ; "Activités à Marseille"*/
+    {
+        height:140px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .card_img_act_tel_FP img /* Image de la card "Fort de Pomègue" ; "Activités à Marseille"*/
+    {
+        width:100%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* "top , "left" , "transform" : rend visible la partie importante de l'image*/
+        margin-top: 1.4em;
+    }
+
+    .card_IF /*Conteneur de la card "Iles du Frioul" ; "Activités à Marseille"*/
+    { 
+        width: 340px;
+        height: 200px;
+        background-color: white;
+        box-shadow: 0px 5px 20px #999;
+        border-radius: 30px 30px 30px 30px;
+        margin-top: 2em;
+    }
+
+    .card_img_act_tel_IF /*Conteneure de l'image pour la card "Iles du Frioul" ; "Activités à Marseille"*/
+    {
+        height:140px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .card_img_act_tel_IF img /*Image de la card "Iles du Frioul" ; "Activités à Marseille"*/
+    {
+        width:100%;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 2em;
+    }
+        
+
+        .card_NDG_PL /*Conteneur des cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+        {
+            width: 340px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0px 5px 20px #999;
+            border-radius: 30px 30px 30px 30px;
+            margin-top: 2em;
+        }
+    
+        .card_img_act_tel_NDG /*Conteneure de l'image pour les cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+        {
+            height:140px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px 30px 0px 0px;
+        }
+    
+        .card_img_act_tel_NDG img /*Image des cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
+        {
+            width:100%;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 2em;
+        }
+
+        .card_img_act_tel_PL
+        {
+            height:140px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px 30px 0px 0px;
+        }
+    
+        .card_img_act_tel_PL img
+        {
+            width:100%;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 2em;
+        }
+
+        #h2_PNC_tel /* Centrage du titre de la Card "Parc Nationnal des Calanques" ; Activités à Marseille"*/
+        {
+            margin: auto;
+        }
+
+        /*PIED DE PAGE ; BREACK POINT TELEPHONE*/
+        footer /*Aligne les éléments du pied de page*/
+        {
+            margin: auto;
+            margin-top: 50px;
+            margin-left: -1em;
+            width: 25em;
+        }
+
+        footer li /*Aligne les éléments de la liste du pied de page*/
+        {
+           margin-left: -20px;
+        }
+    }
