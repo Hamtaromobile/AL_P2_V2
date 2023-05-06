@@ -707,6 +707,29 @@
     @media all and (max-width: 992px) /*Media query pour les écrans en-dessous de 992px de large*/
     {
 
+        .filtre_titre{
+            text-align: center;
+        }
+
+        #sec_form p {
+            text-align: center;
+            margin-top: -0.5em;
+        }
+
+        #ensemble_i_t_info {
+            display: flex;
+            justify-content: center;
+        }
+
+        #sec_card_heb {
+           justify-content: center;
+        }
+
+        .p_info {
+            margin-top: -1em;
+        }
+
+        
         /*HEADER; BREACK POINT TABLETTE : */
         header /*Affichage des éléments de l'en-tête de la page en colonne*/
         {
@@ -767,6 +790,7 @@
         #sec_form p /*Centrage du paragraphe de la section correspondant au formulaire de recherche*/
         {
             text-align: center;
+            margin-top: 1em;
         }
 
         #formulaire /*Centrage du formulaire de recherche d'"hébergement"*/
@@ -813,6 +837,7 @@
         {
             background: none;
             margin-left: 150px;
+            margin-top: 4em;
         }
 
         .card_heb a:hover .card_titre_heb /*Annule l'oppactiée du titre pour card "Hébergement à Marseille" au survol pour "tablette/télephone"*/
@@ -977,7 +1002,7 @@
     }
     
     /*BREACK POINT TELEPHONE*/
-    @media only screen and (max-width: 768px) /*Media query pour les écrans en-dessous de 768px de large*/
+    @media only screen and (max-width: 500px) /*Media query pour les écrans en-dessous de 500+px de large*/
     {
         p {
             font-size: 0.9em;
@@ -1040,6 +1065,9 @@
         }
 
         /*HEADER ; BREACK POINT TELEPHONE*/
+
+        
+
         header li /*Annulation de la marge interne d'"hébergement" et d'"activité"*/
         {
             padding:0px; 
@@ -1157,11 +1185,11 @@
             width: 25em;
         }
         
-        #sec_card_pop /*affichage au centre de la section correspondante aux card " Hebergement à Mareille" pour "Télephone"*/
+        #sec_card_pop 
         {
             margin:auto;
-            height: auto;
-           
+            height: 35em;
+            width: 43em;
             margin-top: 2em;
             margin-left: -0.5em;
         }
@@ -1251,6 +1279,7 @@
 
         .card_img_act_tel_VP/*Conteneur de l'image pour "Télephone" pour les cards : "Activités à Marseille"*/
         {
+            display: block;
             position: relative;
             overflow: hidden;
             height:140px;
@@ -1269,6 +1298,7 @@
 
         .card_img_act_tel_PNC
         {
+            display: block;
             position: relative;
             overflow: hidden;
             height:140px;
@@ -1296,6 +1326,7 @@
 
     .card_img_act_tel_FP /*Conteneur de l'image pour la card "Fort de Pomègue" ; "Activités à Marseille"*/
     {
+        display: block;
         height:140px;
         position: relative;
         overflow: hidden;
@@ -1324,6 +1355,7 @@
 
     .card_img_act_tel_IF /*Conteneure de l'image pour la card "Iles du Frioul" ; "Activités à Marseille"*/
     {
+        display: block;
         height:140px;
         position: relative;
         overflow: hidden;
@@ -1353,6 +1385,7 @@
     
         .card_img_act_tel_NDG /*Conteneure de l'image pour les cards "Notre-Dame-de-la-Garde" et "Parc Longchamp" ; "Activités à Marseille"*/
         {
+            display: block;
             height:140px;
             position: relative;
             overflow: hidden;
@@ -1371,6 +1404,7 @@
 
         .card_img_act_tel_PL
         {
+            display: block;
             height:140px;
             position: relative;
             overflow: hidden;
